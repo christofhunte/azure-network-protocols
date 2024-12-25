@@ -20,10 +20,13 @@ In this project, we observe various network traffic to and from Azure Virtual Ma
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create Windows and Linux Virtual Machines
+- Observe ICMP Traffic
+- Configuring a Firewall (Network Security group)
+- Observe SSH Traffic
+- Observe DHCP Traffic
+- Observe DNS Traffic
+- Observe RDP Traffic
 
 <h2>Actions and Observations</h2>
 
@@ -135,8 +138,31 @@ Next I observed the ICMP traffic in WireShark and the command line Ping activity
 <img src="https://i.imgur.com/lRbhyRq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next step was to start a new packet capture in Wireshark, and filter for SSH traffic only. I started testing commands (username, pwd, etc) into the linux SSH connection to observe SSH traffic spam in WireShark.
+Next step was to start a new packet capture in Wireshark, and filter for SSH traffic only. I started testing commands (username, pwd, etc) into the linux SSH connection to observe SSH traffic spam in WireShark. I then exited the SSH connection by typing ‘exit’ and pressing [Enter]
+</p>
+<br />
 
+<p>
+<img src="https://i.imgur.com/yuOsf14.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next I filtered for DHCP traffic only in Wireshark. I opened PowerShell as an admin and ran: "ipconfig /renew". I then observed the DHCP traffic.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/cJN5Q5m.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next I filtered for DNS traffic only in Wireshark. I opened PowerShell and used "nslookup" to see what google.com and disney.com’s IP addresses were. I then observed the traffic in Wireshark.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/VFabLUT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lastly I filtered for RDP traffic only (tcp.port == 3389) in Wireshark. I observed that the RDP (protocol) is constantly showing you a live stream from one computer to another, therefore traffic is always being transmitted. I then closed the Windows machine in the Remote Desktop and deleted the Resource Group containing the Virtual Machines and Virtual Network.
 </p>
 <br />
 
