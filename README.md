@@ -108,7 +108,7 @@ Next step was to filter for ICMP traffic only within Wireshark. Then I opened up
 <img src="https://i.imgur.com/Z9uXw4Z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next I initiates a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM for the purpose testing a Firewall (Network Security Group) configuration within the Azure Portal.
+Next I initiated a perpetual/non-stop ping from my Windows 10 VM to my Ubuntu VM for the purpose testing a Firewall (Network Security Group) configuration within the Azure Portal.
 </p>
 <br />
 
@@ -118,7 +118,7 @@ Next I initiates a perpetual/non-stop ping from your Windows 10 VM to your Ubunt
 <img src="https://i.imgur.com/UQ547xH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next I opened the Network Security Group the Ubuntu VM is using and disabled incoming (inbound) ICMP traffic with a higher priority ranking.
+Next I opened the Network Security Group the Ubuntu VM was using and disabled incoming (inbound) ICMP traffic with a higher priority ranking.
 </p>
 <br />
 
